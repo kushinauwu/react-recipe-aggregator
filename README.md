@@ -1,6 +1,9 @@
-## MealDB
+## Chefy
 
 This is a recipe aggregator application that categorizes recipes by main ingredient. Includes a search feature. Built with React, Javascript and Sass.
+
+## Live site
+[Chefy](https://kushinauwu.github.io/react-recipe-aggregator/)
 
 ## Installation and Setup
 
@@ -8,15 +11,15 @@ You will need node and npm to run this application on your machine.
 
 Installation:
 
-### `npm install`
+`npm install`
 
 To start the server:
 
-### `npm start`
+`npm start`
 
 To view the app in your browser
 
-### `[http://localhost:3000/react-recipe-aggregator](http://localhost:3000/react-recipe-aggregator)`
+`[http://localhost:3000/react-recipe-aggregator](http://localhost:3000/react-recipe-aggregator)`
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
