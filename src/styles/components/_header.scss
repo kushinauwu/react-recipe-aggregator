@@ -1,0 +1,90 @@
+@use "../variables" as v;
+
+header {
+  background-color: v.$themeColor;
+  padding: 1rem 0;
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+  }
+  h1 a {
+    font-family: v.$titleFont;
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    color: v.$secondaryColor;
+    letter-spacing: 4px;
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: v.$secondaryColor;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+      top: 100%;
+    }
+    &:hover::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+  form {
+    width: 60%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    input {
+      width: 70%;
+      text-indent: 0.5rem;
+      border: 1px solid v.$secondaryColor;
+      background-color: white;
+      border-radius: 4px 0px 0px 4px;
+      font-size: 14px;
+      &:focus,
+      &:focus-visible {
+        outline: 0;
+      }
+    }
+    button {
+      background-color: v.$secondaryColor;
+      border: 0;
+      border-radius: 0 4px 4px 0;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 0 10px;
+      letter-spacing: 0.5px;
+      transition: 0.3s ease-in-out all;
+      &:hover {
+        background-color: v.$secondaryColorLight;
+        color: #000;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+  header h1 a {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .header-wrapper {
+    max-width: 1025px;
+  }
+  header form {
+    justify-content: flex-end;
+  }
+}

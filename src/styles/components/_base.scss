@@ -1,0 +1,35 @@
+@use "../variables" as v;
+
+* {
+  font-family: v.$mainFont;
+  font-size: 16px;
+}
+
+main {
+  min-height: 90vh;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid v.$secondaryColor;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: 5rem auto;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

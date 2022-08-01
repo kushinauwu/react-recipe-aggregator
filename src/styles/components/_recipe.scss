@@ -1,0 +1,133 @@
+@use "../variables" as v;
+
+.recipe-wrapper {
+  width: 90%;
+  margin: 2rem auto 0;
+}
+
+.subheading {
+  font-size: 1.3rem;
+  margin: 2rem auto 1rem;
+}
+
+.recipe-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  .recipe-title {
+    margin: 2rem auto 1rem;
+    line-height: 1.3;
+  }
+  .recipe-image {
+    width: 100%;
+    border-radius: 1rem;
+    margin: 1rem auto;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 0 auto 1rem;
+    width: 100%;
+    text-align: center;
+  }
+  .recipe-tags {
+    margin: 1.5rem auto 1rem;
+    .tag {
+      padding: 8px;
+      background-color: v.$themeColorLight;
+      border-radius: 10px;
+      margin: 0 8px 0 0;
+    }
+  }
+}
+
+.recipe-ingredients-wrapper {
+  .ingredients-list {
+    li {
+      margin: 1rem 0;
+      line-height: 1.3;
+      .ingredient-label {
+        display: flex;
+        align-items: center;
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+        &:before {
+          display: block;
+          content: "";
+          min-width: 1rem;
+          width: 1rem;
+          height: 1rem;
+          background-color: white;
+          border: 2px solid v.$secondaryColor;
+          margin-right: 1rem;
+          transform: rotate(45deg);
+          transition: 0.2s ease-in-out;
+        }
+      }
+      .checked {
+        &:before {
+          background-color: v.$secondaryColorLight;
+          border: 2px solid white;
+          outline: 1px solid v.$secondaryColor;
+        }
+      }
+    }
+  }
+}
+
+.recipe-instructions {
+  li {
+    list-style: decimal;
+    list-style-position: inside;
+    margin: 0.5rem 0;
+    line-height: 1.5;
+    &::marker {
+      font-weight: bold;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .recipe-wrapper {
+    max-width: 580px;
+  }
+  .recipe-info {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    .recipe-title {
+      text-align: left;
+    }
+    h2 {
+      text-align: left;
+    }
+    .recipe-image {
+      order: 1;
+      max-width: 300px;
+      width: 40%;
+      margin: 1rem 3rem 1rem 0;
+    }
+    .recipe-summary {
+      order: 2;
+    }
+    .recipe-tags {
+      text-align: left;
+      order: 3;
+    }
+  }
+  .recipe-ingredients-wrapper {
+    .ingredients-list {
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      columns: 2;
+      li {
+        margin: 0 0 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .recipe-wrapper {
+    max-width: 780px;
+  }
+}

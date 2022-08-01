@@ -1,0 +1,12 @@
+@use "../variables" as v;
+
+footer {
+  background-color: v.$themeColor;
+  color: v.$secondaryColor;
+  padding: 1rem 0;
+  text-align: center;
+  margin: 4rem 0 0;
+  p {
+    margin: 1rem auto;
+  }
+}
