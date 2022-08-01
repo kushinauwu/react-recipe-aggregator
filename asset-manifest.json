@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-recipe-aggregator/static/css/main.e43e7da5.css",
+    "main.js": "/react-recipe-aggregator/static/js/main.17cdbc18.js",
+    "index.html": "/react-recipe-aggregator/index.html",
+    "main.e43e7da5.css.map": "/react-recipe-aggregator/static/css/main.e43e7da5.css.map",
+    "main.17cdbc18.js.map": "/react-recipe-aggregator/static/js/main.17cdbc18.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e43e7da5.css",
+    "static/js/main.17cdbc18.js"
+  ]
+}
