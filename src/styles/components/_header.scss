@@ -6,6 +6,7 @@ header {
   .header-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 90%;
     margin: 0 auto;
   }
@@ -42,17 +43,18 @@ header {
     justify-content: center;
     input {
       width: 70%;
+      height: 30px;
       text-indent: 0.5rem;
       border: 1px solid v.$secondaryColor;
       background-color: white;
       border-radius: 4px 0px 0px 4px;
-      font-size: 14px;
       &:focus,
       &:focus-visible {
         outline: 0;
       }
     }
     button {
+      height: 30px;
       background-color: v.$secondaryColor;
       border: 0;
       border-radius: 0 4px 4px 0;
